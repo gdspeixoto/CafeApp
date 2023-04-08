@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SorteioCafeComponent } from './components/sorteio-cafe/sorteio-cafe.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SorteioCafeComponent
   ],
   imports: [
     BrowserModule,

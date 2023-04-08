@@ -1,0 +1,29 @@
+<div class="content">
+  <div *ngIf="!SorteioRealizado" class="btnRandom">
+    <button (click)="sortear()" class="btn">sortear</button>
+  </div>
+  <div *ngIf="SorteioRealizado" class="sorteado">
+    <span>{{Sorteado}}</span>
+
+    <div class="table-responsive tableCom" style="height: 200px; position: relative;">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Hora do sorteio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let registro of listaDeSorteados.reverse()">
+            <th>{{registro.Id}}</th>
+            <td>{{registro.Nome}}</td>
+            <td>{{registro.Hora}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="btnVoltar" (click)="voltar()">Voltar</button>
+  </div>
+</div>
